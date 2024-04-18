@@ -13,8 +13,14 @@ function Footer() {
           . All Rights Reserved.
         </span>
         <div className="flex justify-center gap-8 py-3 text-gray-600 text-2xl">
-          <AiFillGithub />
-          <AiFillLinkedin />
+          <AiFillGithub
+            href="https://github.com/Aiubay"
+            className="text-teal-500"
+          />
+          <AiFillLinkedin
+            href="https://www.linkedin.com/in/aiubay/"
+            className="text-teal-500"
+          />
         </div>
       </div>
     </footer>
