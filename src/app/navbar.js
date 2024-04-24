@@ -72,7 +72,7 @@ function Navbar({ setDarkMode,darkMode}) {
     <nav className="py-10 mb-2 flex justify-between dark:text-white">
       <a href="/">
         <h1 className="text-xl text-black dark:text-white">
-          Developed By Bay
+          Developed By Ayaya
         </h1>
       </a>
       <ul className="flex items-center">
