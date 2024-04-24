@@ -69,10 +69,12 @@ function Navbar({ setDarkMode,darkMode}) {
     //     </li>
     //   </ul>
     // </nav>
-    <nav className="py-10 mb-12 flex justify-between dark:text-white">
-      <h1 className="text-xl text-black dark:text-white">
-        Developed By Ayayaa
-      </h1>
+    <nav className="py-10 mb-2 flex justify-between dark:text-white">
+      <a href="/">
+        <h1 className="text-xl text-black dark:text-white">
+          Developed By Bay
+        </h1>
+      </a>
       <ul className="flex items-center">
         <li>
           <BsFillMoonStarsFill
@@ -82,7 +84,7 @@ function Navbar({ setDarkMode,darkMode}) {
         </li>
         <li>
           <a
-            className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-bl "
             href="/Resume"
           >
             Resume

@@ -1,6 +1,5 @@
 'use client'
 import Footer from "./footer";
-import Type from "./Type";
 import Navbar from './navbar';
 import Homepage from './Home/home';
 import Projects from './Projects/page';
@@ -25,10 +24,10 @@ export default function Home() {
           {/* <section className="min-h-full">
           </section> */}
         </section>
-        <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900">
-          <Knowledge />
-        </section>
+        {/* <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900">
+        </section> */}
         <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900 dark:text-white">
+          <Knowledge />
           <Projects/>
         </section>
         <Footer />
