@@ -2,21 +2,25 @@
 
 # Achmad Irjik Ubay Portofolio
 
-This is my personal portofolio website built with Next.js.
+This is my personal portofolio website built with Next.js. The website is built using a simple.
 
-You can view the website at: https://achmadirjik.vercel.app/
+The website is built with technology stack, using React, Next.js, and Tailwind CSS. The website is also responsive, so you can view it on your desktop or mobile device and it will adjust to fit the size of your screen.
 
-You can check out the source code at: https://github.com/Aiubay/portofolio
+<!-- You can view the website at: https://achmadirjik.vercel.app/ -->
 
-Feel free to fork and use the code as you wish.
+The source code for the website is available on GitHub at: https://github.com/Aiubay/portofolio. The website is open source, so feel free to fork and use the code as you wish. If you have any questions or suggestions, feel free to open an issue or make a pull request.
 
-If you have any questions or suggestions, feel free to open an issue or make a pull request.
+
+The website includes a brief about me, my projects, and my social media links. The website also includes a dark mode toggle, so you can adjust the website to your preferred theme.
+
+This code is inspired by DevelopedbyEd
+
+Overall, I hope you enjoy the website and find it useful. If you have any questions or feedback, please don't hesitate to reach out.
 
 Enjoy!
 
 
-
-
+---
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

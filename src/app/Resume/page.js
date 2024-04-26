@@ -56,8 +56,8 @@ export default function Resume(){
                   file={"/Assets/resume.pdf"}
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
-                > */}
-                  {/* <Page
+                >
+                  <Page
                     pageIndex={0}
                     scale={1.5}
                     renderTextLayer={false}
