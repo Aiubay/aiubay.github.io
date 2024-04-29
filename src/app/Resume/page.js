@@ -45,14 +45,14 @@ export default function Resume(){
               </a>
             </div>
             <div className="flex justify-center py-10">
-              {/* <div
+              <div
                 style={{
                   overflow: "auto",
                   height: `${width < 768 ? "calc(100vh - 260px)" : "80vh"}`,
                   border: "1px solid black",
                 }}
-              > */}
-                {/* <Document
+              >
+                <Document
                   file={"/Assets/resume.pdf"}
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
@@ -62,7 +62,7 @@ export default function Resume(){
                     scale={1.5}
                     renderTextLayer={false}
                     renderAnnotationLayer={false}
-                  /> */}
+                  />
                   {/* {Array.from(new Array(2), (el, index) => (
                     <Page
                       key={index}
@@ -72,8 +72,8 @@ export default function Resume(){
                       renderAnnotationLayer={false}
                     />
                   ))} */}
-                {/* </Document> */}
-              {/* </div> */}
+                </Document>
+              </div>
             </div>
             <div className="text-center">
               <a

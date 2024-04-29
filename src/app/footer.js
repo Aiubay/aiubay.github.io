@@ -9,7 +9,7 @@ function Footer() {
           © {year} &nbsp;
           <a href="#" className="hover:underline">
             {" "}
-            Developed By Ayaya
+            Developed By Bay
           </a>
           . All Rights Reserved.
         </span>

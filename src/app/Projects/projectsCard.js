@@ -1,3 +1,5 @@
+import { FaThreads } from "react-icons/fa6";
+
 function ProjectsCards(){
   /* -------------------------------------------------------------------------- */
   /*          Budgeting, purchasing, warehouse, risk management, erafos         */
@@ -5,57 +7,57 @@ function ProjectsCards(){
 
   const projects = [
     {
-      image: "/Xianyun.jpeg",
+      image: "/Assets/budget.png",
       title: "Budgeting",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla eget tortor laoreet imperdiet in non lorem. Aenean non suscipit ligula. ",
     },
     {
-      image: "/test.png",
+      image: "/Assets/payment-method.png",
       title: "Purchasing",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla eget tortor laoreet imperdiet in non lorem. Aenean non suscipit ligula. ",
     },
     {
-      image: "/room.jpg",
-      title: "Warehouse",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla eget tortor laoreet imperdiet in non lorem. Aenean non suscipit ligula. ",
+      image: "/Assets/grocery.png",
+      title: "Vendor Portal",
     },
     {
-      image: "/reddit_recap_card_9.png",
+      image: "/Assets/risk-assessment.png",
       title: "Erajaya Risk Management",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla eget tortor laoreet imperdiet in non lorem. Aenean non suscipit ligula. ",
     },
     {
-      image: "/randomi.jpeg",
+      image: "/Assets/erafos.jpeg",
       title: "Erafos",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla eget tortor laoreet imperdiet in non lorem. Aenean non suscipit ligula. ",
+    },
+    {
+      image: "/Assets/threads-app-icon.png",
+      title: "Simple Thread(Meta) Clone",
+    },
+    {
+      image: "/Assets/eraversary2.png",
+      title: "Eraversary",
     },
   ];
 
   return (
     <>
-      {projects.map((project) => (
-        <div className="w-80 mx-auto py-2">
-          <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-110">
+      {projects.map((project, index) => (
+        <div
+          className="w-80 mx-auto py-2"
+        >
+          <div className="bg-white border border-teal-500 rounded-lg shadow w-full dark:bg-gray-800 dark:border-teal-500 hover:scale-110">
             <div className="flex items-center justify-center">
               <img
-                className="rounded-t-lg w-full h-56 object-cover"
-                style={{aspectRatio: "16/9"}}
+                className="rounded-t-lg w-full h-64 object-cover"
+                style={{ aspectRatio: "16/9" }}
                 src={project.image}
                 alt=""
               />
             </div>
             <div className="p-5">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight whitespace-nowrap overflow-x-hidden">
                 {project.title}
               </h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              {/* <p className="mb-3 font-normal text-gray-700 dark:text-white">
                 {project.description}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

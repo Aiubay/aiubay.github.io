@@ -1,5 +1,6 @@
 import { BiLogoPostgresql } from "react-icons/bi";
-import { TbBrandGithub, TbBrandGolang, TbBrandJavascript, TbBrandLaravel, TbBrandMysql, TbBrandNextjs, TbBrandPhp } from "react-icons/tb";
+import { TbBrandGithub, TbBrandGolang, TbBrandJavascript, TbBrandMysql, TbBrandNextjs, TbBrandPhp } from "react-icons/tb";
+import { SiLaravel } from "react-icons/si";
 
 
 function Homepage() {
@@ -11,7 +12,7 @@ function Homepage() {
     },
     {
       title: "Laravel",
-      image: <TbBrandLaravel />,
+      image: <SiLaravel />,
     },
     {
       title: "Golang",
