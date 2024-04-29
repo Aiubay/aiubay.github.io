@@ -46,12 +46,9 @@ function ProjectsCards(){
 
   return (
     <>
-      {projects.map((project, index) => (
-        <div className="w-80 mx-auto py-2">
-          <div
-            className="bg-white border border-teal-500 rounded-lg shadow w-full dark:bg-gray-800 dark:border-teal-500 hover:scale-110"
-            key={project.id}
-          >
+      {projects.map((project) => (
+        <div className="w-80 mx-auto py-2" key={project.id}>
+          <div className="bg-white border border-teal-500 rounded-lg shadow w-full dark:bg-gray-800 dark:border-teal-500 hover:scale-110">
             <div className="flex items-center justify-center">
               <Image
                 className="rounded-t-lg w-full h-64 object-cover"
@@ -60,10 +57,14 @@ function ProjectsCards(){
                 alt=""
                 width={100}
                 height={100}
+                // key={project.id}
               />
             </div>
             <div className="p-5">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight whitespace-nowrap overflow-x-hidden">
+              <h5
+                className="mb-2 text-2xl font-bold tracking-tight whitespace-nowrap overflow-x-hidden"
+                // key={project.id}
+              >
                 {project.title}
               </h5>
               {/* <p className="mb-3 font-normal text-gray-700 dark:text-white">
