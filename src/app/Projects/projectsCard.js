@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function ProjectsCards(){
+function ProjectsCards() {
   /* -------------------------------------------------------------------------- */
   /*          Budgeting, purchasing, warehouse, risk management, erafos         */
   /* -------------------------------------------------------------------------- */
@@ -43,17 +43,19 @@ function ProjectsCards(){
     },
   ];
 
-
   return (
     <>
       {projects.map((project) => (
-        <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg sm:gap-20 hover:scale-110 dark:bg-gray-800 border-teal-500 border" key={project.id}>
-          <div class="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <div
+          className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg md:gap-20 2xl:hover:scale-110 dark:bg-gray-800 border-teal-500 border"
+          key={project.id}
+        >
+          <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
             <img src={project.image} alt="ui/ux review check" />
-            {/* <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div> */}
+            {/* <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div> */}
           </div>
-          <div class="p-6 overflow-hidden">
-            <h5 class="block font-sans text-lg antialiased font-medium leading-snug tracking-normal text-blue-gray-900 dark:text-white break-words">
+          <div className="p-6 overflow-hidden">
+            <h5 className="block font-sans text-lg antialiased font-medium leading-snug tracking-normal text-blue-gray-900 dark:text-white break-words">
               {project.title}
             </h5>
           </div>
@@ -64,4 +66,3 @@ function ProjectsCards(){
 }
 
 export default ProjectsCards;
-

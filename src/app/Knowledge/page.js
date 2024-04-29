@@ -1,10 +1,15 @@
 import { BiLogoPostgresql } from "react-icons/bi";
-import { TbBrandGithub, TbBrandGolang, TbBrandJavascript, TbBrandMysql, TbBrandNextjs, TbBrandPhp } from "react-icons/tb";
+import {
+  TbBrandGithub,
+  TbBrandGolang,
+  TbBrandJavascript,
+  TbBrandMysql,
+  TbBrandNextjs,
+  TbBrandPhp,
+} from "react-icons/tb";
 import { SiLaravel } from "react-icons/si";
 
-
 function Homepage() {
-
   const Knowledge = [
     {
       id: 1,
@@ -47,14 +52,17 @@ function Homepage() {
       image: <TbBrandNextjs />,
     },
   ];
-  
+
   return (
     <>
-      <h1 className="text-5xl text-center py-10 dark:text-white"> Knowledge </h1>
+      <h1 className="text-5xl text-center py-10 dark:text-white">
+        {" "}
+        Knowledge{" "}
+      </h1>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 mx-auto text-5xl py-10 dark:text-teal-500">
         {Knowledge.map((item) => (
           <div
-            className="relative w-full h-full hover:scale-110 border-2 border rounded border-teal-500 flex justify-center"
+            className="relative w-full h-full hover:scale-110 border-2 border rounded border-teal-500 flex justify-center dark:bg-gray-900"
             key={item.id}
           >
             <div className="w-full h-full flex items-center justify-center">
@@ -71,5 +79,3 @@ function Homepage() {
 }
 
 export default Homepage;
-
-

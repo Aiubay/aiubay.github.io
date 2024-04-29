@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
-function Navbar({ setDarkMode,darkMode}) {
+function Navbar({ setDarkMode, darkMode }) {
   // const [showMenu, setShowMenu] = useState(false);
   // const toggleMenu = () => setShowMenu(!showMenu);
 
@@ -69,11 +69,10 @@ function Navbar({ setDarkMode,darkMode}) {
     //     </li>
     //   </ul>
     // </nav>
-    <nav className="py-10 mb-2 flex justify-between dark:text-white">
+    // className="  "
+    <nav className="bg-white text-gray-800 dark:text-white dark:bg-gray-900 px-5 md:px-20 lg:px-40 py-10 flex justify-between">
       <a href="/">
-        <h1 className="text-xl text-black dark:text-white">
-          Developed By Bay
-        </h1>
+        <h1 className="text-xl">Developed By Bay</h1>
       </a>
       <ul className="flex items-center">
         <li>
@@ -96,4 +95,3 @@ function Navbar({ setDarkMode,darkMode}) {
 }
 
 export default Navbar;
-
