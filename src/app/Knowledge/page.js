@@ -50,11 +50,19 @@ function Homepage() {
   
   return (
     <>
-      <h1 className="text-5xl text-center p-10 dark:text-white"> Knowledge </h1>
-      <div className="grid grid-cols-4 gap-2 md:gap-4 lg:gap-6 text-5xl py-10 dark:text-teal-500">
+      <h1 className="text-5xl text-center py-10 dark:text-white"> Knowledge </h1>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 mx-auto text-5xl py-10 dark:text-teal-500">
         {Knowledge.map((item) => (
-          <div className="hover:scale-110 border-2 border rounded border-teal-500 flex justify-center" key={item.id}>
-            {item.image}
+          <div
+            className="relative w-full h-full hover:scale-110 border-2 border rounded border-teal-500 flex justify-center"
+            key={item.id}
+          >
+            <div className="w-full h-full flex items-center justify-center">
+              {item.image}
+            </div>
+            {/* <div className="absolute bottom-0 right-0 p-2 bg-white rounded-bl border-l border-b border-teal-500">
+              <p className="text-sm">{item.title}</p>
+            </div> */}
           </div>
         ))}
       </div>
@@ -63,3 +71,5 @@ function Homepage() {
 }
 
 export default Homepage;
+
+

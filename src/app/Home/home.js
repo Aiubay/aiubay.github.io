@@ -25,18 +25,18 @@ function Homepage() {
           and deployment.
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+      <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 md:text-xl">
         <a href="https://github.com/Aiubay" target="_blank">
-          <AiFillGithub className="text-teal-500" />
+          <AiFillGithub className="text-teal-500" style={{ width: "2.5rem", height: "2.5rem" }} />
         </a>
         <a href="https://www.linkedin.com/in/aiubay/" target="_blank">
-          <AiFillLinkedin className="text-teal-500" />
+          <AiFillLinkedin className="text-teal-500" style={{ width: "2.5rem", height: "2.5rem" }} />
         </a>
         <a href="https://wa.me/6281231508232" target="_blank">
-          <AiFillPhone className="text-teal-500" />
+          <AiFillPhone className="text-teal-500" style={{ width: "2.5rem", height: "2.5rem" }} />
         </a>
         <a href="mailto:airjikubay@gmail.com" target="_blank">
-          <AiFillMail className="text-teal-500" />
+          <AiFillMail className="text-teal-500" style={{ width: "2.5rem", height: "2.5rem" }} />
         </a>
       </div>
     </>

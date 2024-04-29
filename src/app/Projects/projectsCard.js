@@ -47,30 +47,15 @@ function ProjectsCards(){
   return (
     <>
       {projects.map((project) => (
-        <div className="w-80 mx-auto py-2" key={project.id}>
-          <div className="bg-white border border-teal-500 rounded-lg shadow w-full dark:bg-gray-800 dark:border-teal-500 hover:scale-110">
-            <div className="flex items-center justify-center">
-              <Image
-                className="rounded-t-lg w-full h-64 object-cover"
-                style={{ aspectRatio: "16/9" }}
-                src={project.image}
-                alt=""
-                width={100}
-                height={100}
-                // key={project.id}
-              />
-            </div>
-            <div className="p-5">
-              <h5
-                className="mb-2 text-2xl font-bold tracking-tight whitespace-nowrap overflow-x-hidden"
-                // key={project.id}
-              >
-                {project.title}
-              </h5>
-              {/* <p className="mb-3 font-normal text-gray-700 dark:text-white">
-                {project.description}
-              </p> */}
-            </div>
+        <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg sm:gap-20 hover:scale-110 dark:bg-gray-800 border-teal-500 border">
+          <div class="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+            <img src={project.image} alt="ui/ux review check" />
+            {/* <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div> */}
+          </div>
+          <div class="p-6 overflow-hidden">
+            <h5 class="block font-sans text-lg antialiased font-medium leading-snug tracking-normal text-blue-gray-900 dark:text-white break-words">
+              {project.title}
+            </h5>
           </div>
         </div>
       ))}
@@ -79,3 +64,4 @@ function ProjectsCards(){
 }
 
 export default ProjectsCards;
+

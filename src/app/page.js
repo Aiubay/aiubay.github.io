@@ -27,7 +27,7 @@ export default function Home() {
         </section>
         {/* <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900">
         </section> */}
-        <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900 dark:text-white">
+        <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900 dark:text-white md:text-3xl">
           <Knowledge />
           <Projects />
         </section>
