@@ -20,7 +20,7 @@ function Homepage() {
           <Type className="text-bold text-gray-800" />
         </h3>
         <p className="text-md py-5 leading-8 text-gray-800 max-w-xl mx-auto md:text-lg dark:text-white">
-          I'm a developer with expertise in web development. I handle everything
+          I&apos;m a developer with expertise in web development. I handle everything
           from project development to database design, maintenance, debugging,
           and deployment.
         </p>
