@@ -47,11 +47,11 @@ function ProjectsCards() {
     <>
       {projects.map((project) => (
         <div
-          className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg md:gap-20 2xl:hover:scale-110 dark:bg-gray-800 border-teal-500 border"
+          className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg 2xl:hover:scale-110 dark:bg-gray-800 border-teal-500 border"
           key={project.id}
         >
           <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-            <img src={project.image} alt="ui/ux review check" />
+            <img src={project.image} alt="" />
             {/* <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div> */}
           </div>
           <div className="p-6 overflow-hidden">
