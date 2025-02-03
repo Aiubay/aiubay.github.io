@@ -7,7 +7,7 @@ import Knowledge from "./Knowledge/page";
 import { useState } from "react";
 import Contact from "./Contact/page";
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   function handleClick() {
     setDarkMode(!darkMode);
   }

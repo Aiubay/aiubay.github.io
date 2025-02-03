@@ -7,7 +7,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import Footer from "../footer";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 export default function Resume(){
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     function handleClick() {
       setDarkMode(!darkMode);
     }

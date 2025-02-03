@@ -11,7 +11,6 @@ function Footer() {
             {" "}
             Developed By Bay
           </a>
-          . All Rights Reserved.
         </span>
         <div className="flex justify-center gap-8 py-3 text-gray-600 text-2xl">
           <AiFillGithub
