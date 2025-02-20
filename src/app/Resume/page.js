@@ -21,13 +21,13 @@ export default function Resume(){
 
     return (
       <>
-        <div className={darkMode ? "dark" : ""}>
-          <section className="bg-white px-10 text-gray-700 min-h-screen dark:bg-gray-900">
+        <main className={darkMode ? "dark" : ""}>
             <Navbar
               handleClick={handleClick}
               darkMode={darkMode}
               setDarkMode={setDarkMode}
             />
+          <section className="bg-white px-10 text-gray-700 min-h-screen dark:bg-gray-900">
             <div className="text-center">
               <a
                 href="/Assets/resume.pdf"
@@ -94,7 +94,7 @@ export default function Resume(){
             </div>
           </section>
           <Footer />
-        </div>
+        </main>
       </>
     );
 

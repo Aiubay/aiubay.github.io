@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 function Navbar({ setDarkMode, darkMode }) {
@@ -70,7 +68,9 @@ function Navbar({ setDarkMode, darkMode }) {
     //   </ul>
     // </nav>
     // className="  "
-    <nav className="bg-white text-gray-800 dark:text-white dark:bg-gray-900 px-5 md:px-20 lg:px-40 py-10 flex justify-between">
+    <nav
+      className="bg-white text-gray-800 dark:text-white dark:bg-gray-900 px-5 md:px-20 lg:px-40 py-10 flex justify-between"
+    >
       <a href="/">
         <h1 className="text-xl">Developed By Bay</h1>
       </a>
@@ -84,9 +84,9 @@ function Navbar({ setDarkMode, darkMode }) {
         <li>
           <a
             className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-bl "
-            href="/Resume"
+            href={location.pathname === "/Resume" ? "/" : "/Resume"}
           >
-            Resume
+            {location.pathname === "/Resume" ? "Home" : "Resume"}
           </a>
         </li>
       </ul>
