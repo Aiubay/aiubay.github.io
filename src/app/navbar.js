@@ -1,8 +1,11 @@
+import { usePathname } from "next/navigation";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
 function Navbar({ setDarkMode, darkMode }) {
   // const [showMenu, setShowMenu] = useState(false);
   // const toggleMenu = () => setShowMenu(!showMenu);
+  const router = usePathname();
+  const href = router === "/Resume" ? "/" : "/Resume";
 
   return (
     // <nav className="py-10 mb-12 flex justify-between sticky top-0 bg-white dark:bg-gray-900 text-white">
@@ -83,10 +86,10 @@ function Navbar({ setDarkMode, darkMode }) {
         </li>
         <li>
           <a
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-bl "
-            href={location.pathname === "/Resume" ? "/" : "/Resume"}
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-bl "
+            href={href}
           >
-            {location.pathname === "/Resume" ? "Home" : "Resume"}
+            {href === "/Resume" ? "Resume" : "Home"}
           </a>
         </li>
       </ul>
