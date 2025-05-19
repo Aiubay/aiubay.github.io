@@ -39,7 +39,7 @@ function ProjectsCards() {
     {
       id: 7,
       image: "/Assets/eraversary2.png",
-      title: "Eraversary",
+      title: "Lucky Draw",
     },
   ];
 
