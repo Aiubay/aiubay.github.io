@@ -1,41 +1,42 @@
-"use client";
-import Footer from "./footer";
-import Navbar from "./navbar";
-import Homepage from "./Home/home";
-import Projects from "./Projects/page";
-import Knowledge from "./Knowledge/page";
-import { useState } from "react";
-import Contact from "./Contact/page";
-export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
-  function handleClick() {
-    setDarkMode(!darkMode);
-  }
+'use client';
+import Homepage from './Home/home';
+import Projects from './Projects/page';
+import Knowledge from './Knowledge/page';
+import Contact from './Contact/page';
+import AnimatedSection from './components/AnimatedSection';
 
+export default function Home() {
   return (
-    <main className={darkMode ? "dark" : ""}>
-      <Navbar
-        handleClick={handleClick}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
-      <div className=" bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="bg-white px-10 text-gray-700 h-screen dark:bg-gray-900">
+    <div className="bg-white dark:bg-gray-900">
+      <div className="px-10 md:px-20 lg:px-40">
+        <section className="min-h-screen flex items-center justify-center text-gray-700 dark:text-white">
           <Homepage />
-          {/* <section className="min-h-full">
-          </section> */}
         </section>
-        {/* <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900">
-        </section> */}
-        <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900 dark:text-white md:text-3xl">
-          <Knowledge />
-          <Projects />
-        </section>
-        <section className="text-center p-10 bg-white px-10 text-gray-700 dark:bg-gray-900 dark:text-white">
-          <Contact />
-        </section>
-        <Footer />
       </div>
-    </main>
+
+      <AnimatedSection className="bg-gray-50 dark:bg-gray-800 py-20">
+        <div className="px-10 md:px-20 lg:px-40">
+          <section id="knowledge" className="text-center text-gray-700 dark:text-white">
+            <Knowledge />
+          </section>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="py-20">
+        <div className="px-10 md:px-20 lg:px-40">
+          <section id="projects" className="text-center text-gray-700 dark:text-white">
+            <Projects />
+          </section>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="bg-gray-50 dark:bg-gray-800 py-20">
+        <div className="px-10 md:px-20 lg:px-40">
+          <section id="contact" className="text-center text-gray-700 dark:text-white">
+            <Contact />
+          </section>
+        </div>
+      </AnimatedSection>
+    </div>
   );
 }

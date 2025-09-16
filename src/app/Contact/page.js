@@ -2,6 +2,7 @@ import { AiFillLinkedin, AiFillMail, AiFillPhone } from "react-icons/ai";
 
 function Contact() {
     return (
+      <section id="contact">
       <>
         <div className="max-w-screen-xl mx-auto">
           <h1 className="text-5xl mb-8 md:xl">Contact me</h1>
@@ -25,6 +26,7 @@ function Contact() {
           </a>
         </div>
       </>
+    </section>
     );
 }
 export default Contact;

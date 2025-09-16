@@ -9,74 +9,70 @@ import {
 } from "react-icons/tb";
 import { SiLaravel } from "react-icons/si";
 
-function Homepage() {
-  const Knowledge = [
+function KnowledgeSection() {
+  const knowledgeItems = [
     {
       id: 1,
       title: "PHP",
-      image: <TbBrandPhp />,
+      icon: <TbBrandPhp />,
     },
     {
       id: 2,
       title: "Laravel",
-      image: <SiLaravel />,
+      icon: <SiLaravel />,
     },
     {
       id: 3,
       title: "Golang",
-      image: <TbBrandGolang />,
+      icon: <TbBrandGolang />,
     },
     {
       id: 4,
-      title: "Mysql",
-      image: <TbBrandMysql />,
+      title: "MySQL",
+      icon: <TbBrandMysql />,
     },
     {
       id: 5,
-      title: "Postgre",
-      image: <BiLogoPostgresql />,
+      title: "PostgreSQL",
+      icon: <BiLogoPostgresql />,
     },
     {
       id: 6,
       title: "Git",
-      image: <TbBrandGithub />,
+      icon: <TbBrandGithub />,
     },
     {
       id: 7,
-      title: "Js",
-      image: <TbBrandJavascript />,
+      title: "JavaScript",
+      icon: <TbBrandJavascript />,
     },
     {
       id: 8,
-      title: "Next",
-      image: <TbBrandNextjs />,
+      title: "Next.js",
+      icon: <TbBrandNextjs />,
     },
   ];
 
   return (
-    <>
-      <h1 className="text-5xl text-center py-10 dark:text-white">
-        {" "}
-        Knowledge{" "}
+    <section>
+      <h1 className="text-5xl text-center py-10 dark:text-white font-bold">
+        My Knowledge
       </h1>
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 mx-auto text-5xl py-10 dark:text-teal-500">
-        {Knowledge.map((item) => (
-
-            <div
-              className="relative w-full h-full border-2 rounded border-teal-500 flex justify-center dark:bg-gray-900 transition-transform duration-300 ease-in-out hover:scale-105 sm:hover:scale-110 md:hover:scale-105 lg:hover:scale-110 xl:hover:scale-105 2xl:hover:scale-110 z-10 hover:z-20"
-              key={item.id}
-              >
-              <div className="w-full h-full flex items-center justify-center">
-                {item.image}
-              </div>
-              {/* <div className="absolute bottom-0 right-0 p-2 bg-white rounded-bl border-l border-b border-teal-500">
-                <p className="text-sm">{item.title}</p>
-                </div> */}
-            </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {knowledgeItems.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-teal-500/50 border border-transparent hover:border-teal-500"
+          >
+            <div className="text-6xl text-teal-500 mb-4">{item.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              {item.title}
+            </h3>
+          </div>
         ))}
       </div>
-    </>
+    </section>
   );
 }
 
-export default Homepage;
+export default KnowledgeSection;

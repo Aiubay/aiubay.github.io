@@ -6,7 +6,7 @@ function Projects() {
   /* -------------------------------------------------------------------------- */
 
   return (
-    <section>
+    <section id="projects">
       <div>
         <h1 className="text-5xl text-center py-10 dark:text-white">
           {" "}
