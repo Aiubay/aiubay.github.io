@@ -1,42 +1,47 @@
 'use client';
-import Homepage from './Home/home';
-import Projects from './Projects/page';
-import Knowledge from './Knowledge/page';
-import Contact from './Contact/page';
-import AnimatedSection from './components/AnimatedSection';
+
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Marquee from './components/Marquee';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function Home() {
+  useEffect(() => {
+    const targets = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('in'), i * 60);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    targets.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <div className="bg-white dark:bg-gray-900">
-      <div className="px-10 md:px-20 lg:px-40">
-        <section className="min-h-screen flex items-center justify-center text-gray-700 dark:text-white">
-          <Homepage />
-        </section>
-      </div>
+    <>
+      <div className="mesh"><div className="blob b1" /><div className="blob b2" /><div className="blob b3" /></div>
+      <div className="dot-grid" />
 
-      <AnimatedSection className="bg-gray-50 dark:bg-gray-800 py-20">
-        <div className="px-10 md:px-20 lg:px-40">
-          <section id="knowledge" className="text-center text-gray-700 dark:text-white">
-            <Knowledge />
-          </section>
-        </div>
-      </AnimatedSection>
+      <Navbar />
 
-      <AnimatedSection className="py-20">
-        <div className="px-10 md:px-20 lg:px-40">
-          <section id="projects" className="text-center text-gray-700 dark:text-white">
-            <Projects />
-          </section>
+      <main className="bento-main">
+        <div className="grid">
+          <Hero />
+          <Marquee />
+          <Projects />
+          <Experience />
+          <Contact />
         </div>
-      </AnimatedSection>
+      </main>
 
-      <AnimatedSection className="bg-gray-50 dark:bg-gray-800 py-20">
-        <div className="px-10 md:px-20 lg:px-40">
-          <section id="contact" className="text-center text-gray-700 dark:text-white">
-            <Contact />
-          </section>
-        </div>
-      </AnimatedSection>
-    </div>
+      <Footer />
+    </>
   );
 }

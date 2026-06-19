@@ -1,22 +1,19 @@
-'use client';
-
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
-import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+
+export const metadata = {
+  title: "Achmad Irjik Ubay — Full Stack Developer",
+  description: "Personal portfolio of Achmad Irjik Ubay, a Full Stack Developer based in Indonesia.",
+};
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(true);
-
   return (
     <html lang="en">
-      <body className={`${inter.className} ${darkMode ? 'dark' : ''}`}>
-        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.variable} ${outfit.variable}`}>
+        {children}
       </body>
     </html>
   );
