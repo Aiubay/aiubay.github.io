@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div id="contact" className="card contact-card c12 r3 reveal">
       <div className="contact-container">
-        <h3>Let&apos;s build something great together</h3>
+        <h2>Let&apos;s build something great together</h2>
         <p>
           Feel free to contact me for business or just to say hi. I&apos;m
           always open to new opportunities, side projects, and interesting collaborations.

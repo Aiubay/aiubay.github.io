@@ -2,22 +2,26 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(true);
+  const [light, setLight] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light') { setDark(false); document.documentElement.classList.add('light'); }
+    setLight(document.documentElement.classList.contains('light'));
   }, []);
 
   const toggle = () => {
-    setDark(!dark);
-    document.documentElement.classList.toggle('light');
-    localStorage.setItem('theme', dark ? 'light' : 'dark');
+    const next = !light;
+    setLight(next);
+    document.documentElement.classList.toggle('light', next);
+    try { localStorage.setItem('theme', next ? 'light' : 'dark'); } catch (e) {}
   };
 
   return (
-    <button className="theme-btn" onClick={toggle} aria-label="Toggle theme">
-      {dark ? '☀️' : '🌙'}
+    <button
+      className="theme-btn"
+      onClick={toggle}
+      aria-label={light ? 'Switch to dark theme' : 'Switch to light theme'}
+    >
+      {light ? '🌙' : '☀'}
     </button>
   );
 }

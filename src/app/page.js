@@ -12,6 +12,10 @@ import Footer from './components/Footer';
 export default function Home() {
   useEffect(() => {
     const targets = document.querySelectorAll('.reveal');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      targets.forEach(el => el.classList.add('in'));
+      return;
+    }
     const io = new IntersectionObserver(entries => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
@@ -26,12 +30,13 @@ export default function Home() {
 
   return (
     <>
+      <div id="top" />
       <div className="mesh"><div className="blob b1" /><div className="blob b2" /><div className="blob b3" /></div>
       <div className="dot-grid" />
 
       <Navbar />
 
-      <main className="bento-main">
+      <main className="bento-main" id="main-content" tabIndex={-1}>
         <div className="grid">
           <Hero />
           <Marquee />
